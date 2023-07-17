@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "koneksi.php";
 // Membuat koneksi ke database
 $conn = new mysqli($servername, $username, $password, $database);
@@ -19,6 +20,9 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // Pengguna ditemukan ke halam index
     header("location:app/index.php?pesan=welcome");
+    $user =mysqli_fetch_array($result);
+    $_SESSION['nama'] = $user['nama'];
+    $_SESSION['level'] = $user['level'];
 
 } else if (($username == "") || ($password == "")) {
     header("location:index.php?error=1");

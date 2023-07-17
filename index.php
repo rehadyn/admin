@@ -95,5 +95,14 @@ if (isset($_GET['error'])) {
   }
 }
 ?>
-
+<?php
+if (isset($_GET['pesan'])) {
+  $x = ($_GET['pesan']);
+  if ($x == "logout") {
+    echo "<script>toastr.success('Anda telah berhasil logout.')</script>";
+  } else {
+    echo '';
+  }
+}
+?>
 </html>

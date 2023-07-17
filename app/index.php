@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php 
+session_start(); 
+if($_SESSION['nama']==""){
+  header("location:../index.php");
+}
+?>
 <?php include('header.php'); ?>
 
-<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
   <div class="wrapper">
 
     <!-- Preloader -->
