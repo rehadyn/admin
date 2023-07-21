@@ -1,8 +1,8 @@
 <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+    <strong>Copyright &copy; Reza Hadiwijaya Dynasti <a href="https://rehad.id">REHAD.ID</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
-        <b>Version</b> 3.2.0
+        <b>Version</b> 1
     </div>
 </footer>
 <!-- REQUIRED SCRIPTS -->
@@ -37,6 +37,14 @@
 <script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
 <script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
 <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<!-- Ekko Lightbox -->
+<script src="plugins/ekko-lightbox/ekko-lightbox.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- Filterizr-->
+<script src="plugins/filterizr/jquery.filterizr.min.js"></script>
+<!-- kanba -->
+<script src="dist/js/kanba.js"></script>
 <!-- Page specific script -->
 <script>
     $(function () {
@@ -56,7 +64,7 @@
     });
 </script>
 <script>
-//    menu actiov saat di klik
+    //    menu actiov saat di klik
     $(document).ready(function () {
         var url = window.location;
         $('ul.nav-sidebar a').filter(function () {
@@ -66,17 +74,40 @@
             return this.href == url;
         }).parentsUntil(".nav-sidebar > .nav-treeview").addClass('menu-open').prev('a').addClass('active');
     });
-  </script>
-<?php
-if (isset($_GET['status'])) {
-    if ($_GET['status'] == 'sukses') {
-        echo "<script>
+</script>
+<script>
+    document.querySelector('#p1').addEventListener('mdl-componentupgraded', function () {
+        this.MaterialProgress.setProgress(44);
+    });
+</script>
+<div class="kanban__title">
+    <script>
+        $('.kanban-card').on('click', function () {
+            // Get the column that the card is currently in
+            var currentColumn = $(this).closest('.kanban-column');
+
+            // Get the column that you want to move the card to
+            var targetColumn = $('#column-2');
+
+            // Move the card to the target column
+            $(this).appendTo(targetColumn);
+        });
+    </script>
+    <?php
+    if (isset($_GET['status'])) {
+        if ($_GET['status'] == 'sukses') {
+            echo "<script>
         toastr.success('Data Berhasil Ditambahkan')
         </script>";
-    } else if ($_GET['status'] == 'gagal') {
-        echo "<script>
+        } else if ($_GET['status'] == 'gagal') {
+            echo "<script>
         toastr.error('Data Gagal Ditambahkan')
         </script>";
+        }
     }
-}
-?>
+    ?>
+    <script>
+        $(function () {
+
+        })
+    </script>

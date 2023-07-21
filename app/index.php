@@ -43,6 +43,9 @@ if($_SESSION['nama']==""){
       else if ($_GET['page'] == 'datamhs') {
         include ('datamhs/datamhs.php');
       }
+      else if ($_GET['page'] == 'kanbaboard') {
+        include ('kanba.php');
+      }
       ?>
       <!-- /.content -->
     </div>

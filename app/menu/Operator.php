@@ -3,7 +3,7 @@
         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
         <li class="nav-item">
-          <a href="index.php?page=dashboard" class="nav-link active">
+          <a href="index.php?page=dashboard" class="nav-link">
             <i class="nav-icon fas fa-tachometer-alt"></i>
             <p>
               Dashboard
@@ -15,7 +15,7 @@
         <li class="nav-header">EXAMPLES</li>
         <!-- /.pemisah -->
         <li class="nav-item">
-          <a href="pages/calendar.html" class="nav-link">
+          <a href="#" class="nav-link">
             <i class="nav-icon fas fa-calendar-alt"></i>
             <p>
               Calendar
@@ -24,7 +24,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="pages/gallery.html" class="nav-link">
+          <a href="#" class="nav-link">
             <i class="nav-icon far fa-image"></i>
             <p>
               Gallery
@@ -32,7 +32,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="pages/kanban.html" class="nav-link">
+          <a href="#" class="nav-link">
             <i class="nav-icon fas fa-columns"></i>
             <p>
               Kanban Board
