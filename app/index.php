@@ -31,6 +31,19 @@ if($_SESSION['nama']==""){
 
       <!-- Main content -->
       <?php include('dashboard.php'); ?>
+
+      <!-- Logic -->
+      <?php
+      if ($_GET['page'] == 'dashboard') {
+        include('dashboard.php');
+      }
+      else if ($_GET['page'] == 'adduser') {
+        include('user/adduser.php');
+      }
+      else if ($_GET['page'] == 'datamhs') {
+        include ('datamhs/datamhs.php');
+      }
+      ?>
       <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->

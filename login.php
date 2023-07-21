@@ -19,7 +19,7 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // Pengguna ditemukan ke halam index
-    header("location:app/index.php?pesan=welcome");
+    header("location:app/index.php?page=dashboard");
     $user =mysqli_fetch_array($result);
     $_SESSION['nama'] = $user['nama'];
     $_SESSION['level'] = $user['level'];

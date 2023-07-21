@@ -12,6 +12,3 @@ if (!$conn) {
     die("Koneksi gagal: " . mysqli_connect_error());
 }
 
-// Menutup koneksi
-mysqli_close($conn);
-?>
